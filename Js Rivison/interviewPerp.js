@@ -382,12 +382,206 @@
 
 //!===============================================
 
-//? 3.9: Create a JavaScript Function to capitalize the first letter of each word of a given string.
+// //? 3.9: Create a JavaScript Function to capitalize the first letter of each word of a given string.
 
-function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1)
+// function capitalize(str) {
+//     return str.charAt(0).toUpperCase() + str.slice(1)
+// }
+
+// console.log(capitalize("aman gupta"));
+
+// function applyToEachWord(string, transformation){
+//    return string.split(" ").map(transformation).join(" ")
+// }
+
+// console.log(applyToEachWord("aman gupta welcome", capitalize));
+
+//!===============================================
+
+//todos Chapter 4 (Objects)
+
+//? 4.1: Guess the Output And Explain ?
+
+// console.log(Math.round(Math.random() * 10));
+
+//!===============================================
+
+//? 4.2: Create an object called country for a country of your choice, containing properties name , capital, language, population and neighbors
+
+// Increase the country population by two million using dot notation.
+// Decrease the country population by one million using bracket notation.
+// Make language value in Uppercase.
+
+// const country ={
+//     name: "India",
+//     capital: 'new delhi',
+//     language: "hindi english gujarati",
+//     population: 150,
+//     neighbour: "Bhutan"
+
+// }
+
+// console.log(country.population = "2 Million");
+// console.log(country["population"]= "1M");
+
+//  let languageChange = country.language.split(" ").map((item)=>{
+//  return  item.charAt(0).toUpperCase() + item.slice(1)
+
+// })
+// country.language = languageChange.join(" ");
+
+// console.log(country.language);
+
+//!===============================================
+
+
+//? 4.3: Guess the Output and explain Why?
+
+// let car = {
+//   color: 'Blue',
+
+//   model: 2021,
+
+//   company: 'Toyota',
+// };
+
+// let carColor = 'Blue';
+
+// console.log(car[carColor]);
+
+// console.log(car.carColor);
+
+// console.log(car["carColor"] = carColor);
+// console.log(car.carColor);
+
+// console.log(car);
+
+
+//!===============================================
+
+
+//? 4.4: Create a method describeCar inside car object in which you have to print like this in console using template literals
+
+// let car = {
+//   company: "BMW",
+//   color:"Black",
+//   model: "X-Series",
+//   desscribeCar: function(company, color, model){
+//     return `Compant of my car is ${this.company} its color is ${this.color} and model is ${this.model}`
+//   }
+// }
+
+// console.log(car.desscribeCar());
+
+
+//!===============================================
+
+//? 4.5: Generate random numbers between 0 and 10 using trunc method of MATH object
+
+
+// function getRandomNumber() {
+//     let randonNum = Math.trunc(Math.random() * 11)
+//     return randonNum;
+// }
+
+// console.log(getRandomNumber());
+
+//!===============================================
+
+//? 4.6: Guess the Output and Explain Why?
+
+// let  arr  = [1,2,3,4];
+
+// arr.forEach(elem  =>{
+
+// if(elem  ==  1){  // error
+
+// continue;
+
+// }
+
+//***********************
+
+// if (elem !== 1) {     // Correct code
+//     console.log(elem);
+// }
+
+// console.log(elem);
+
+// })
+
+// Ans - he continue statement is not allowed within an arrow function expression or a non-looping context. In this case, the forEach loop is not considered a looping context like for or while loops.
+
+//!===============================================
+
+//? 4.7: Guess the Output And explain Why?
+
+//? Important Note: if there is any error, How we can solve that error?
+
+
+// let airplane = {
+//     flightName: 'fly india',
+
+//     atacode: 'FI',
+
+//     ratings: 4.9,
+
+//     book(passenger, flightNum) {
+//       console.log(
+//         `${passenger} Booked flight in ${this.flightName} with flight Number ${this.atacode}${flightNum}`
+//       );
+//     },
+//   };
+
+//   let bookMethod = airplane.book.bind(airplane)
+
+//   bookMethod('john', 8754);
+
+
+//!===============================================
+
+//? 4.8: Guess the Output And Explain Why?
+
+// let arr = [1, 2, 3, 4];
+
+// for (let elem in arr) {
+//   console.log(elem);
+// }
+
+// for...in Loop:
+// The for...in loop is used to iterate over the enumerable properties of an object. It's suitable for objects where you need to access both the property names (keys) and their corresponding values. However, it's generally not recommended for iterating over arrays because it might not give the desired behavior.
+
+
+// for...of Loop:
+// The for...of loop is designed for iterating over the values of an iterable. It provides a simpler syntax and is primarily used with arrays and other iterable objects. It's especially useful when you only need the values and don't care about the indices.
+
+
+//!===============================================
+
+//? 4.9: You have to create a Shopping_Cart array with following features :
+
+//? addItem(itemName) : this function should add string itemName to cart
+
+//? removeItem(itemName): this function should remove any item which matches itemName. Hint : search for index of itemName and then remove it
+
+//? cartSize() : returns size of cart in terms of number of cart Items.
+
+let shopping_Cart = []
+
+const addItem = (item)=>{
+ return  shopping_Cart.push(item)
 }
 
+addItem("mobile")
+addItem("laptop")
+addItem("charger")
 
+const removeItem =(item)=>{
+ let remove = shopping_Cart.indexOf(item)
+ return shopping_Cart.splice(1, remove)
+}
 
-console.log(capitalize("aman gupta"));
+console.log(removeItem("laptop"));
+console.log(removeItem("mobile"));
+
+console.log(shopping_Cart);
