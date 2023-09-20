@@ -109,7 +109,7 @@
 
 // let c = 8;   
 
-// let result = a > b > c;
+// let result = a < b > c;   1
 
 // console.log(result);
 
@@ -134,7 +134,7 @@
 
 // for (let j = 0; i < 10; i++) {
 //   if (j === 1 || i === 6) {
-//     continue;
+//     continue;                      
 //   } else {
 //     console.log(i, j);
 
@@ -170,6 +170,8 @@
 // for (i; i < 5; i++) {
 //   console.log(i);
 // }
+
+// console.log(i);
 
 //Ans- loop run until the condition i<5 so the result is 0,1,2,3,4
 
@@ -390,8 +392,8 @@
 
 // console.log(capitalize("aman gupta"));
 
-// function applyToEachWord(string, transformation){
-//    return string.split(" ").map(transformation).join(" ")
+// function applyToEachWord(string, transformation) {
+//     return string.split(" ").map(transformation).join(" ")
 // }
 
 // console.log(applyToEachWord("aman gupta welcome", capitalize));
@@ -402,7 +404,7 @@
 
 //? 4.1: Guess the Output And Explain ?
 
-// console.log(Math.round(Math.random() * 10));
+// console.log(Math.round(Math.random() * 10)); 
 
 //!===============================================
 
@@ -566,22 +568,60 @@
 
 //? cartSize() : returns size of cart in terms of number of cart Items.
 
-let shopping_Cart = []
+// let shopping_Cart = []
 
-const addItem = (item)=>{
- return  shopping_Cart.push(item)
-}
+// const addItem = (item) => {
+//     return shopping_Cart.push(item)
+// }
 
-addItem("mobile")
-addItem("laptop")
-addItem("charger")
+// addItem("mobile")
+// addItem("laptop")
+// addItem("charger")
 
-const removeItem =(item)=>{
- let remove = shopping_Cart.indexOf(item)
- return shopping_Cart.splice(1, remove)
-}
+// console.log(shopping_Cart);
 
-console.log(removeItem("laptop"));
-console.log(removeItem("mobile"));
+// const removeItem = (item) => {
+//     let remove = shopping_Cart.indexOf(item)
+//     return shopping_Cart.splice(1, remove)
+// }
 
-console.log(shopping_Cart);
+// console.log(removeItem("laptop"));
+// console.log(removeItem("mobile"));
+
+// console.log(shopping_Cart);
+
+//!=======================================================
+
+// todo Chapter 5 (DOM)
+
+//? 5.1: Explain difference between innerText and innerHTML in the following example?
+
+
+// let content = document.getElementById("content")
+
+// console.log(content.innerHTML);
+
+// console.log(content.innerText);
+
+
+//!=======================================================
+
+
+// todos Chapter 6 ( DOM - Forms )
+
+//? Create regex for password with the following validations.
+
+//? Length of password at least of 8 characters
+
+//? contain at least one special character
+
+//? contain at least one alphabet (a-z) character
+
+
+
+
+
+
+
+
+
